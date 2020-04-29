@@ -1,1 +1,1 @@
-# -test-automation-architecture
+# test-automation-architecture
