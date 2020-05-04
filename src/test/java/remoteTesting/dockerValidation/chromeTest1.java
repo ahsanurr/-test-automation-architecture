@@ -24,13 +24,6 @@ public class chromeTest1 {
         s.startFile();
     }
 
-    @AfterTest
-    public void stopDockerDeleteFile() throws IOException, InterruptedException {
-        stopDocker d = new stopDocker();
-        d.stopFile();
-
-
-    }
 
     @Test
     public void test1() throws MalformedURLException {
@@ -40,6 +33,14 @@ public class chromeTest1 {
         RemoteWebDriver driver = new RemoteWebDriver(u, cap);
         driver.get("http://google.com");
         System.out.println(driver.getTitle());
+
+    }
+
+    @AfterTest
+    public void stopDockerDeleteFile() throws IOException, InterruptedException {
+        stopDocker d = new stopDocker();
+        d.stopFile();
+
 
     }
 
